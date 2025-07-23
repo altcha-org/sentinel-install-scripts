@@ -7,7 +7,7 @@
 set -e
 
 # Sentinel Docker image tag
-SENTINEL_VERSION="1.8.1"
+SENTINEL_VERSION="1.8.2"
 
 # Colors for output
 RED='\033[0;31m'
