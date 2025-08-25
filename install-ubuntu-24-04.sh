@@ -160,6 +160,10 @@ services:
     container_name: altcha_sentinel
     restart: unless-stopped
     env_file: .env
+    deploy:
+      resources:
+        limits:
+          memory: 2G
     ports:
       - "8080:8080"
     volumes:
