@@ -169,7 +169,7 @@ services:
     volumes:
       - altcha_sentinel_data:/data
     healthcheck:
-      test: ["CMD-SHELL", "bash -c 'echo -e \"GET / HTTP/1.0\\r\\n\\r\\n\" > /dev/tcp/127.0.0.1/8080'"]
+      test: ["CMD-SHELL", "cat /proc/net/tcp /proc/net/tcp6 2>/dev/null | grep -q ':1F90 [0-9A-F]*:[0-9A-F]* 0A'"]
       interval: 5s
       timeout: 5s
       retries: 3
